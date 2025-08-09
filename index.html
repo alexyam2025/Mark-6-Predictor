@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hong Kong Mark Six Lottery Predictor</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Hong Kong Mark Six Lottery Predictor</h1>
+    <p>Analyze past results and predict the most likely next draw (for fun & education).</p>
+  </header>
+
+  <main>
+    <section class="input-section">
+      <label for="numDraws">Number of past draws to analyze:</label>
+      <input type="number" id="numDraws" value="20" min="5" max="50" />
+      <button id="loadDataBtn" type="button">Load Sample Data</button>
+
+      <label for="pastResults">Enter past results (one draw per line, 6 numbers each, comma or space separated):</label>
+      <textarea id="pastResults" rows="12"></textarea>
+      <button id="predictBtn" type="button">Predict Next Entry</button>
+    </section>
+
+    <section id="resultsDisplay" class="hidden">
+      <h2>Prediction Results</h2>
+      <div id="modelResults"></div>
+
+      <h3>Weighted Ensemble Prediction</h3>
+      <div id="ensemblePrediction" class="highlight"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Disclaimer: Predictions are based on statistical patterns but lottery draws are random. No guarantee of winnings.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
